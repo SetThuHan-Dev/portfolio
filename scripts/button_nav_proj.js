@@ -22,6 +22,7 @@ const ProjectNames =
     "littleChallenger",
 ]
 
+const ProjectCacheVersion = window.PORTFOLIO_VERSION || "20260526";
 let ProjectText = [];
 
 let projTextArea = document.getElementById("project_data_area");
@@ -30,7 +31,7 @@ let projTextArea = document.getElementById("project_data_area");
 for(let i = 0; i < ProjectNames.length; ++i)
 {
     ProjectText.push("");
-    fetch("./Data/pages/projects/" + ProjectNames[i] + ".html")
+    fetch("./Data/pages/projects/" + ProjectNames[i] + ".html?v=" + ProjectCacheVersion)
     .then( r => r.text() )
     .then( t => ProjectText[i] = t )
 }

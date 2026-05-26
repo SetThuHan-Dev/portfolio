@@ -13,6 +13,7 @@ const ContentNames =
 const TextAreaMinHeightExtended = "200px";
 const TextAreaMinHeightClosed = "0px";
 const TransitionDuration = 0;
+const ContentCacheVersion = window.PORTFOLIO_VERSION || "20260526";
 
 let IncludeText = [];
 let lastButtonIndex = -1;
@@ -22,7 +23,7 @@ let buttonLock = false;
 for(let i = 0; i < ContentNames.length; ++i)
 {
     IncludeText.push("");
-    fetch("./Data/pages/" + ContentNames[i] + ".html")
+    fetch("./Data/pages/" + ContentNames[i] + ".html?v=" + ContentCacheVersion)
     .then( r => r.text() )
     .then( t => IncludeText[i] = t )
 }

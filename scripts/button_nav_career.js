@@ -8,6 +8,7 @@ const CareerNames =
     "work"
 ]
 
+const CareerCacheVersion = window.PORTFOLIO_VERSION || "20260526";
 let CareerText = [];
 
 let careerTextArea = document.getElementById("project_data_area");
@@ -16,7 +17,7 @@ let careerTextArea = document.getElementById("project_data_area");
 for(let i = 0; i < CareerNames.length; ++i)
 {
     CareerText.push("");
-    fetch("./Data/pages/careers/" + CareerNames[i] + ".html")
+    fetch("./Data/pages/careers/" + CareerNames[i] + ".html?v=" + CareerCacheVersion)
     .then( r => r.text() )
     .then( t => CareerText[i] = t )
 
