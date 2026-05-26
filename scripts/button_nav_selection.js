@@ -29,6 +29,39 @@ for(let i = 0; i < ContentNames.length; ++i)
 
 /* Display the included text for the correct content. */
 
+function focusContentArea(textArea)
+{
+    const targetTop = textArea.getBoundingClientRect().top + window.pageYOffset;
+    const startTop = window.pageYOffset;
+    const distance = targetTop - startTop;
+    const duration = 420;
+    const startTime = performance.now();
+    let isCancelled = false;
+
+    function cancelScroll()
+    {
+        isCancelled = true;
+    }
+
+    window.addEventListener("wheel", cancelScroll, { once: true, passive: true });
+    window.addEventListener("touchstart", cancelScroll, { once: true, passive: true });
+
+    function scrollStep(currentTime)
+    {
+        if(isCancelled)
+            return;
+
+        const progress = Math.min((currentTime - startTime) / duration, 1);
+        const easedProgress = 1 - Math.pow(1 - progress, 3);
+        window.scrollTo(0, startTop + distance * easedProgress);
+
+        if(progress < 1)
+            requestAnimationFrame(scrollStep);
+    }
+
+    requestAnimationFrame(scrollStep);
+}
+
 function revealIncludeText(textArea, i) 
 {
     if (textArea.style.opacity == 0) /* Case: Not currently displaying anything in this text area */
@@ -36,6 +69,7 @@ function revealIncludeText(textArea, i)
         document.body.style.height = "200vh";
         textArea.innerHTML = IncludeText[i];
         textArea.style.opacity = 1;
+        focusContentArea(textArea);
 	}
     else  /* Case where area is already displayed some data */
     {
@@ -44,9 +78,16 @@ function revealIncludeText(textArea, i)
         {
 			textArea.innerHTML = IncludeText[i];
 			textArea.style.opacity = 1;
+            focusContentArea(textArea);
 		}, TransitionDuration / 2);
     }
     
+}
+
+function setActiveNavButton(buttons, activeIndex)
+{
+    for (let i = 0; i < buttons.length; ++i)
+        buttons[i].classList.toggle("kd-button-active", i == activeIndex);
 }
 
 /* Called when the DOM content is loaded. */
@@ -67,17 +108,9 @@ document.addEventListener('DOMContentLoaded', function()
         {
             if (!buttonLock) 
             {
-                if (lastButtonIndex >= 0) 
-                {
-					buttons[lastButtonIndex].class = "kd-button";
-				}
                 if (i != lastButtonIndex) 
                 {
-					buttons[i].class = "kd-button";
-                    for (let j = 0; j < buttons.length; ++j) 
-                    {
-						buttons[j].class = j != i ? "kd-button-idle" : buttons[j].class;
-					}
+                    setActiveNavButton(buttons, i);
 					revealIncludeText(textArea, i);
 					lastButtonIndex = i;
                     if (textArea.style.minHeight == TextAreaMinHeightClosed || textArea.style.minHeight == "") 
@@ -87,10 +120,7 @@ document.addEventListener('DOMContentLoaded', function()
 				}
                 else 
                 {
-                    for (let j = 0; j < buttons.length; ++j) 
-                    {
-						buttons[j].class = "kd-button";
-					}
+                    setActiveNavButton(buttons, -1);
 					textArea.innerHTML = "";
 					lastButtonIndex = -1;
                     setTimeout(function() 

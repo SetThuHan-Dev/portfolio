@@ -5,7 +5,6 @@
 const ProjectNames = 
 [
     "sirCodeAlot",
-    "cleanTheFloor",
     "ropeAndBalls",
     "fillOneLine",
     "fillThemAll",
@@ -36,32 +35,25 @@ for(let i = 0; i < ProjectNames.length; ++i)
     .then( t => ProjectText[i] = t )
 }
 
-let bLock = false;
-let prevBtnIndex = -1; 
-
 function LoadProject(button, btnIndex)
 {
-    if(button.getAttribute("class") == "proj-button-active") /* case where you select the active button */
-    {
-        var x = document.getElementsByClassName("proj-button-active");
+    const detailBody = document.getElementById("project-detail-body");
+    const activeButtons = document.getElementsByClassName("proj-button-active");
+    
+    if(!detailBody)
+        return;
 
-        x[0].className = "proj-button";
-        projTextArea.innerHTML = "";
-        projTextArea.style.opacity = 0;
-    }
-    else 
-    {
-        var x = document.getElementsByClassName("proj-button-active");
-        if(x.length != 0) /* case where another project is currently active and being displayed. */
-        {
-            x[0].className = "proj-button";
-            projTextArea.innerHTML = "";
-            projTextArea.style.opacity = 0;
-        }
+    while(activeButtons.length > 0)
+        activeButtons[0].className = "proj-button";
 
-        /* Set this button as the active display */
-        projTextArea.innerHTML = ProjectText[btnIndex];
-        projTextArea.style.opacity = 1;
-        document.getElementById(button.getAttribute("id")).className = "proj-button-active";
-    }
+    button.className = "proj-button-active";
+    detailBody.innerHTML = ProjectText[btnIndex];
+    detailBody.classList.remove("project-detail-visible");
+
+    setTimeout(function()
+    {
+        detailBody.classList.add("project-detail-visible");
+        detailBody.focus({ preventScroll: true });
+        detailBody.scrollIntoView({ behavior: "smooth", block: "start" });
+    }, 20);
 }

@@ -1,0 +1,10 @@
+body,
+body *:not(.fa) {
+    font-family: 'VT323', 'Courier New', monospace !important;
+    letter-spacing: 0 !important;
+}
+
+.fa,
+.fa:before {
+    font-family: FontAwesome !important;
+}
