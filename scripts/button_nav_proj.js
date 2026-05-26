@@ -22,7 +22,7 @@ const ProjectNames =
     "littleChallenger",
 ]
 
-const ProjectCacheVersion = window.PORTFOLIO_VERSION || "20260526";
+const ProjectCacheVersion = window.PORTFOLIO_VERSION || "20260526-2";
 let ProjectText = [];
 
 let projTextArea = document.getElementById("project_data_area");

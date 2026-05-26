@@ -8,7 +8,7 @@ const CareerNames =
     "work"
 ]
 
-const CareerCacheVersion = window.PORTFOLIO_VERSION || "20260526";
+const CareerCacheVersion = window.PORTFOLIO_VERSION || "20260526-2";
 let CareerText = [];
 
 let careerTextArea = document.getElementById("project_data_area");

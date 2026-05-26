@@ -13,7 +13,7 @@ const ContentNames =
 const TextAreaMinHeightExtended = "200px";
 const TextAreaMinHeightClosed = "0px";
 const TransitionDuration = 0;
-const ContentCacheVersion = window.PORTFOLIO_VERSION || "20260526";
+const ContentCacheVersion = window.PORTFOLIO_VERSION || "20260526-2";
 
 let IncludeText = [];
 let lastButtonIndex = -1;
