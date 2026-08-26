@@ -1,100 +1,1033 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <!-- Metadata -->
-        <meta charset="utf-8">
-        <meta http-equiv='cache-control' content='no-cache'> 
-        <meta http-equiv='expires' content='0'> 
-        <meta http-equiv='pragma' content='no-cache'>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="pragma" content="no-cache">
 
-        <!-- Mobile Specific Metas -->
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
-        <meta name="keywords" content="programmer, coding, mobile, javascript, c#, .net, game developer, english, myanmar" />
-        <meta name="description" content="Unity game developer interested in any fun and hight quality game development. (Kindly USE VPN if loading page takes long or within Myanmar Region)" />
-        <meta name="portfolio-version" content="20260724-2" />
+    <title>Set Thu Han | Senior Unity Developer & Game Engineer</title>
+    <meta name="description" content="Senior Unity Developer & Game Engineer specializing in Console (PS5 60 FPS Low Energy Mode), Mobile (iOS/Android), and WebGL. Expertise in gameplay systems, enemy AI, custom URP/HDRP shaders, and real-time multiplayer.">
+    <meta name="keywords" content="Senior Unity Developer, Game Engineer, PS5 Optimization, C#, C++, Shader Graph, HLSL, Game Programming, WebGL, Real-time Multiplayer">
+    <meta name="author" content="Set Thu Han">
+    <meta name="portfolio-version" content="20260826-7" />
 
-        <title>Set Thu Han</title>
-        <!-- External file links for this html page  -->
-        <script>
-            window.PORTFOLIO_VERSION = "20260724-2";
-        </script>
-        
-        <!-- CSS -->
-        <link rel="stylesheet" type="text/css" href="styles/skeleton.css?v=20260724-2">
-        <link rel="stylesheet" type="text/css" href="styles/landing.css?v=20260724-2">
-        <link rel="stylesheet" type="text/css" href="styles/career.css?v=20260724-2">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Open Graph / SEO -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Set Thu Han | Senior Unity Developer & Game Engineer">
+    <meta property="og:description" content="Console, Mobile & WebGL Game Engineer. PS5 runtime optimization, custom URP shaders, and real-time multiplayer systems.">
+    <meta property="og:image" content="./Data/images/portrait.png">
 
-        <!-- Project related css files --> 
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/sirCodeAlot.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/fillThemAll.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/fillOneLine.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/ropeAndBalls.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/woodo.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/route.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/stack.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/gasStation.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/mofupon.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/dragonSmash.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/project_styles/monkeyBubble.css?v=20260724-2"/>
-        <link rel="stylesheet" type="text/css" href="./styles/pixel-font.css?v=20260724-2"/>
+    <!-- JSON-LD Structured Data for AI & Search Reviewers -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Set Thu Han",
+      "jobTitle": "Senior Unity Developer & Game Engineer",
+      "url": "https://setthuhan-dev.github.io/portfolio/",
+      "sameAs": [
+        "https://www.linkedin.com/in/set-thu-han/",
+        "https://github.com/SetThuHan-Dev",
+        "https://setthuhan-shin.itch.io/"
+      ],
+      "knowsAbout": [
+        "PlayStation 5 Console Optimization",
+        "Unity Engine (Built-In, URP, HDRP)",
+        "C#",
+        "C++",
+        "Shader Programming (HLSL, Shader Graph)",
+        "Pipeline State Objects (PSO) Pre-warming",
+        "Unity Addressables & Object Pooling",
+        "Real-time Multiplayer (Socket.IO, Node.js)",
+        "Mobile WebGL & Flutter Integration"
+      ]
+    }
+    </script>
 
-        <!-- Icon -->
-        <link rel="icon" type="image/png" href="./Data/images/icon_trans.png">
+    <!-- Version Script -->
+    <script>
+        window.PORTFOLIO_VERSION = "20260826-7";
+    </script>
 
-        <!-- Scripts -->
-        <script src="scripts/quick_links.js?v=20260724-2"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="styles/landing.css?v=20260826-7">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- Add google analytics data -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./Data/images/icon_trans.png">
+</head>
+<body id="top">
 
-    </head>
+    <!-- Sticky Navigation Bar -->
+    <nav class="site-nav">
+        <div class="container-custom nav-wrapper">
+            <a href="#top" class="nav-brand">
+                <img src="./Data/images/portrait.png" alt="Set Thu Han" class="avatar-thumb">
+                <span>Set Thu Han</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#shaders" class="nav-link">Tech Art &amp; R&amp;D</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="./Data/resume/Set_Thu_Han_Resume.pdf?v=20260826-7" class="nav-resume-btn" download>
+                <i class="fa-solid fa-file-arrow-down"></i> Resume PDF
+            </a>
+        </div>
+    </nav>
 
-    <!-- Add a custom container class implementation here.... -->
-    <body id="top">  
-        <div class="container" style="margin-top: 1%" align="center">   
-            <div id="title">Set Thu Han</div>            
-            <img class="landing_logo" src="./Data/images/portrait.png" alt="Portrait">
-            <div id="quick_links">
-                <a href="mailto:setthuhan01@gmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                <a href="https://github.com/SetThuHan-Dev" target="_blank"><i class="fa fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/set-thu-han/" target="_blank"><i class="fa fa-linkedin"></i></a>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container-custom">
+            <div class="hero-avatar-wrapper">
+                <img class="hero-avatar" src="./Data/images/portrait.png" alt="Set Thu Han - Senior Unity Developer & Game Engineer">
             </div>
-            <hr>
-            <div id="about_me">Hi there! My name is Set Thu Han, I'm a passionate Unity game developer who feels enjoyment and fulfillment from the journey of creating games.</div>
-            <br>
+            
+            <h1 class="hero-title" id="title">Set Thu Han</h1>
+            <div class="hero-subtitle text-gradient">&lt;Senior Unity Developer &amp; Game Engineer&gt;</div>
 
-            <section class="buttons">
-                <div class="text-center">
-                    <a href="./Data/resume/Set_Thu_Han_Resume.pdf?v=20260724-2" download>
-                        <div class="btnCV btn-5 kd-button">Download My Resume</div> 
+            <p class="hero-bio">
+                Game Engineer with <b>6+ years of commercial and indie experience</b> across <b>PlayStation 5</b>, <b>Mobile</b>, and <b>WebGL</b>. Specialized in 60 FPS console optimization, enemy AI behaviors, custom URP/HDRP shaders, and real-time multiplayer systems.
+            </p>
+
+            <div class="hero-badges">
+                <span class="badge-tag highlight-ps5"><i class="fa-brands fa-playstation"></i> PS5 60 FPS Optimization</span>
+                <span class="badge-tag"><i class="fa-brands fa-unity"></i> Unity URP / HDRP</span>
+                <span class="badge-tag"><i class="fa-solid fa-code"></i> C# / C++</span>
+                <span class="badge-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Custom Shaders</span>
+                <span class="badge-tag"><i class="fa-solid fa-network-wired"></i> Socket.IO Multiplayer</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="./Data/resume/Set_Thu_Han_Resume.pdf?v=20260826-7" class="btn-primary" download>
+                    <i class="fa-solid fa-file-pdf"></i> Download Resume
+                </a>
+                <a href="#projects" class="btn-outline">
+                    <i class="fa-solid fa-gamepad"></i> Featured Projects
+                </a>
+                <a href="#shaders" class="btn-outline">
+                    <i class="fa-solid fa-layer-group"></i> Tech Art &amp; R&amp;D
+                </a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="mailto:setthuhan.Dev@outlook.com" class="social-icon-btn" title="Email" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/set-thu-han/" class="social-icon-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/SetThuHan-Dev" class="social-icon-btn" title="GitHub" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://setthuhan-shin.itch.io/" class="social-icon-btn" title="Itch.io" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-itch-io"></i>
+                </a>
+            </div>
+
+            <!-- Key Performance Metrics Row -->
+            <div class="metrics-row">
+                <div class="metric-box">
+                    <div class="metric-number highlight-blue">6+</div>
+                    <div class="metric-label">Years Game Dev</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-number">60 FPS</div>
+                    <div class="metric-label">PS5 Low Energy Mode</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-number highlight-blue">15+</div>
+                    <div class="metric-label">Shipped &amp; Prototypes</div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-number">B.Eng</div>
+                    <div class="metric-label">Mechatronics Engineering</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="section-container">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="section-eyebrow">Career History</span>
+                <h2 class="section-title">Work Experience</h2>
+                <p class="section-subtitle">Commercial engineering roles on console titles, mobile releases, and multiplayer WebGL.</p>
+            </div>
+
+            <div class="timeline-list">
+                
+                <!-- Mega Cat Studios -->
+                <div class="timeline-card featured-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="company-name megacat">
+                                    <i class="fa-brands fa-playstation"></i> Mega Cat Studios
+                                </div>
+                                <div class="job-role">Game Engineer (Contractor - PS5) • Remote</div>
+                            </div>
+                            <span class="job-period">July 2024 – April 2026</span>
+                        </div>
+                        <ul class="timeline-bullet-list">
+                            <li><b>Gameplay &amp; AI Engineering:</b> Engineered assigned enemy AI behaviors and combat gameplay systems utilizing Finite State Machines (FSM) on <a href="https://www.playstation.com/en-us/games/god-of-war-sons-of-sparta/" target="_blank" rel="noopener noreferrer" style="color: var(--accent-focus); font-weight: 600; text-decoration: underline;">God of War: Sons of Sparta (PS5)</a>.</li>
+                            <li><b>Co-op Features &amp; PS5 LEM Optimization:</b> Implemented new gameplay features, bug fixes, and stabilized locked 60 FPS on PS5 Low Energy Mode (LEM) for the <i>Pit of Agonies</i> local co-op mode via codebase refactoring, Scene Hierarchy audits, Playable Timeline inspections, Addressables pooling, and PSO VFX pre-warming.</li>
+                            <li><b>Telemetry &amp; Crash Profiling:</b> Partnered with VFX artists to optimize overdraw hotspots, analyzing profiling telemetry and draw calls to enforce strict console GPU budgets.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tech-chip">PlayStation 5</span>
+                            <span class="tech-chip">Addressables &amp; Pooling</span>
+                            <span class="tech-chip">PSO Pre-warming</span>
+                            <span class="tech-chip">Enemy AI</span>
+                            <span class="tech-chip">Unity Profiler</span>
+                            <span class="tech-chip">C#</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DKMads Co., Ltd -->
+                <div class="timeline-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="company-name dkmads">
+                                    <i class="fa-solid fa-code"></i> DKMads Co., Ltd
+                                </div>
+                                <div class="job-role">Senior Game Developer • On-site</div>
+                            </div>
+                            <span class="job-period">Feb 2023 – April 2024</span>
+                        </div>
+                        <ul class="timeline-bullet-list">
+                            <li><b>WebGL &amp; Flutter Integration:</b> Architected and deployed optimized Unity WebGL games embedded inside Flutter mobile applications via <code>InAppWebView</code> and bidirectional WebAPI bridges.</li>
+                            <li><b>Real-Time Multiplayer:</b> Engineered full-stack turn-based multiplayer WebGL gameplay using Socket.IO in Node.js (backend) and Unity WebGL (client).</li>
+                            <li><b>Low-End Optimization:</b> Handled single-threaded WebGL constraints and browser memory limits on entry-level mobile devices via zero-allocation data structures.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tech-chip">Unity WebGL</span>
+                            <span class="tech-chip">Socket.IO / Node.js</span>
+                            <span class="tech-chip">Flutter InAppWebView</span>
+                            <span class="tech-chip">WebAPI</span>
+                            <span class="tech-chip">C#</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Myanmar51 Studio -->
+                <div class="timeline-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="company-name myanmar51">
+                                    <i class="fa-solid fa-cube"></i> Myanmar51 Studio Co., Ltd
+                                </div>
+                                <div class="job-role">Unity Game Developer &amp; QC Lead • On-site</div>
+                            </div>
+                            <span class="job-period">Oct 2020 – Sept 2022</span>
+                        </div>
+                        <ul class="timeline-bullet-list">
+                            <li><b>Sanrio Commercial Title:</b> Developed modular Bingo quest systems, multi-language localization (EN/JP), and reward logic for Sanrio's commercial mobile title <i>Tiny Park</i> (10 mini-games).</li>
+                            <li><b>Monetization SDKs:</b> Re-engineered ad infrastructure by integrating AppLovin LionSDK across live titles, resolving complex Xcode App Store build issues.</li>
+                            <li><b>Cinematic HDRP Sequences:</b> Produced AAA-quality rendered promo videos in Unity HDRP using custom Shader Graphs, VFX Graphs, and timeline animation retargeting.</li>
+                            <li><b>Technical Mentorship &amp; QC:</b> Led Quality Control reviews and mentored junior developers on shader creation and post-processing workflows.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tech-chip">Unity HDRP / URP</span>
+                            <span class="tech-chip">AppLovin LionSDK</span>
+                            <span class="tech-chip">Sanrio IP</span>
+                            <span class="tech-chip">VFX &amp; Shader Graph</span>
+                            <span class="tech-chip">iOS / Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coca-Cola -->
+                <div class="timeline-card">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div>
+                                <div class="company-name cocacola">
+                                    <i class="fa-solid fa-industry"></i> Coca-Cola (Hmawbi Branch)
+                                </div>
+                                <div class="job-role">Machine Operator (Blower &amp; Filler)</div>
+                            </div>
+                            <span class="job-period">Jan 2020 – Oct 2020</span>
+                        </div>
+                        <ul class="timeline-bullet-list">
+                            <li><b>Automation Operations:</b> Operated automated industrial Blower and Filler production lines, applying Mechatronic control systems and manufacturing safety protocols.</li>
+                        </ul>
+                        <div class="tag-list">
+                            <span class="tech-chip">Industrial Automation</span>
+                            <span class="tech-chip">Machine Operation</span>
+                            <span class="tech-chip">Electro-Mechanical Systems</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects Section (Organized by Studio & Company) -->
+    <section id="projects" class="section-container">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="section-eyebrow">Portfolio Works</span>
+                <h2 class="section-title">Projects &amp; Prototypes</h2>
+                <p class="section-subtitle">Commercial titles categorized under each studio alongside independent gameplay prototypes.</p>
+            </div>
+
+            <!-- Project Category Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All Works</button>
+                <button class="filter-btn" data-filter="megacat">Mega Cat (PS5)</button>
+                <button class="filter-btn" data-filter="dkmads">DKMads (WebGL)</button>
+                <button class="filter-btn" data-filter="myanmar51">Myanmar51 (Mobile)</button>
+                <button class="filter-btn" data-filter="jams">Prototypes &amp; Jams</button>
+                <button class="filter-btn" data-filter="multiplayer">Multiplayer</button>
+                <button class="filter-btn" data-filter="shaders">Shaders</button>
+            </div>
+
+            <!-- Commercial Scope Note -->
+            <div class="commercial-scope-banner">
+                <div class="scope-icon"><i class="fa-solid fa-layer-group"></i></div>
+                <div class="scope-text">
+                    <strong>15+ Commercial Titles, Prototypes &amp; Client Releases Delivered</strong>
+                    <p>
+                        The works showcased below represent a curated selection of publicly shareable titles grouped by studio. Across 6+ years at Mega Cat Studios, DKMads, and Myanmar51 Studio, I have engineered and contributed to 15+ commercial games, AppLovin/LionSDK integrations, rapid 1-week prototypes for Japanese publishers, and proprietary client WebGL apps (additional architecture breakdowns and NDA project workflows available upon discussion).
+                    </p>
+                </div>
+            </div>
+
+            <!-- Studio 1: Mega Cat Studios -->
+            <div class="studio-block" data-studio="megacat">
+                <div class="studio-group-header">
+                    <div class="studio-group-title megacat">
+                        <i class="fa-brands fa-playstation"></i>
+                        <span>Mega Cat Studios</span>
+                    </div>
+                    <span class="studio-scope-badge">PS5 Console Systems &amp; Enemy AI</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- God of War: Sons of Sparta -->
+                    <article class="project-card" data-category="megacat commercial">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/gow_sons_of_sparta.png" alt="God of War: Sons of Sparta" style="object-fit: cover;">
+                            <span class="project-category-badge commercial">PS5 Console Release</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">God of War: Sons of Sparta</h3>
+                            <p class="project-desc">
+                                Engineered enemy AI combat systems with Finite State Machines (FSM). Integrated local co-op features, bug fixes, and locked 60 FPS PS5 Low Energy Mode (LEM) runtime optimizations via codebase refactoring, Scene Hierarchy audits, Playable Timeline inspections, Addressables pooling, and PSO VFX pre-warming.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>PlayStation 5</span>
+                                <span>Enemy AI</span>
+                                <span>PSO Pre-warming</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.playstation.com/en-us/games/god-of-war-sons-of-sparta/" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-playstation"></i> PlayStation Store
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Studio 2: DKMads Co., Ltd -->
+            <div class="studio-block" data-studio="dkmads">
+                <div class="studio-group-header">
+                    <div class="studio-group-title dkmads">
+                        <i class="fa-solid fa-code"></i>
+                        <span>DKMads Co., Ltd</span>
+                    </div>
+                    <span class="studio-scope-badge">4+ WebGL Titles &amp; In-App Systems</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Little Challenger (1v1 Multiplayer) -->
+                    <article class="project-card" data-category="dkmads multiplayer commercial">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/LC_icon.png" alt="Little Challenger">
+                            <span class="project-category-badge commercial">Real-Time Multiplayer</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Little Challenger (1v1)</h3>
+                            <p class="project-desc">
+                                Turn-based 1v1 multiplayer WebGL game. Built bidirectional socket synchronization using Node.js and Socket.IO for in-app cross-device matchmaking.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Socket.IO</span>
+                                <span>Node.js</span>
+                                <span>Unity WebGL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=xjhCM8UNOkU" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Edu WebGL Games (ChitMayMay) -->
+                    <article class="project-card" data-category="dkmads multiplayer commercial">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/eduGames_icon.png" alt="Edu Games">
+                            <span class="project-category-badge commercial">Embedded WebGL</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Edu WebGL Games Suite</h3>
+                            <p class="project-desc">
+                                Educational WebGL mini-games embedded in Flutter's <i>ChitMayMay</i> app with custom WebAPI bridges and low-end memory optimizations.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity WebGL</span>
+                                <span>Flutter WebView</span>
+                                <span>WebAPI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=nYQYJ8g_UAw" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Gameplay Video
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.dkmads.chitmaymay" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-google-play"></i> App Store
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Studio 3: Myanmar51 Studio Co., Ltd -->
+            <div class="studio-block" data-studio="myanmar51">
+                <div class="studio-group-header">
+                    <div class="studio-group-title myanmar51">
+                        <i class="fa-solid fa-cube"></i>
+                        <span>Myanmar51 Studio Co., Ltd</span>
+                    </div>
+                    <span class="studio-scope-badge">6+ Commercial Titles &amp; HDRP Cinematics</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Tiny Park (Sanrio 10 Mini-Games) -->
+                    <article class="project-card" data-category="myanmar51 commercial">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="https://play-lh.googleusercontent.com/3x1XFpbHEKLCfhBMV2nCBw9AgicWo8VaUWrTv-R1MghqfMPHKrdep0L_Iv9iz4o8Ig=w240-h480-rw" alt="Tiny Park">
+                            <span class="project-category-badge commercial">Sanrio Commercial IP</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Tiny Park (Sanrio)</h3>
+                            <p class="project-desc">
+                                Commercial mobile mini-game suite featuring Sanrio characters. Built modular Bingo quest systems, multi-language localization (EN/JP), and reward algorithms.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity 2D</span>
+                                <span>Sanrio IP</span>
+                                <span>Bingo Architecture</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/SetThuHan-Dev/Bingo-Checker-in-Unity" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-github"></i> Bingo GitHub
+                                </a>
+                                <a href="https://play.google.com/store/apps/details?id=com.creativeplus.tinypark" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-google-play"></i> Play Store
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Route -->
+                    <article class="project-card" data-category="myanmar51 commercial">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/route_icon.png" alt="Route">
+                            <span class="project-category-badge commercial">MagicAnt Publisher</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Route</h3>
+                            <p class="project-desc">
+                                Mobile puzzle release with Japanese publisher MagicAnt. Re-architected monetization with AppLovin LionSDK and resolved Xcode build conflicts.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity Mobile</span>
+                                <span>AppLovin LionSDK</span>
+                                <span>Xcode</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://route-magicant-inc.en.aptoide.com/app" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i> App Page
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Rope and Balls / RokuBalls -->
+                    <article class="project-card" data-category="myanmar51 commercial jams">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/ropeAndBalls_icon.png" alt="Rope and Balls">
+                            <span class="project-category-badge commercial">Physics Casual</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Rope and Balls (RokuBalls)</h3>
+                            <p class="project-desc">
+                                Physics casual game published to PlayStore &amp; AppStore. Integrates dynamic LineRenderer 2D ropes with 3D physics collision volumes.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity Physics</span>
+                                <span>LineRenderer</span>
+                                <span>Mobile &amp; WebGL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://setthuhan-shin.itch.io/rokuballs" target="_blank" rel="noopener noreferrer" class="project-link-btn itch-btn">
+                                    <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=dCxmNV3NGGE" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Dragon Smash Promo Sequences -->
+                    <article class="project-card" data-category="myanmar51 shaders commercial">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/dragonSmash_icon.png" alt="Dragon Smash">
+                            <span class="project-category-badge commercial">HDRP Cinematic</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Dragon Smash Promo</h3>
+                            <p class="project-desc">
+                                Cinematic promotional sequence rendered in Unity HDRP. Directed camera framing, dense terrain foliage, custom VFX shaders, and Timeline animations.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity HDRP</span>
+                                <span>Timeline</span>
+                                <span>VFX Shaders</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=jY9Ky_XO_Mg" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> 1080p Render
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Gas Station 3D (Myanmar51) -->
+                    <article class="project-card" data-category="myanmar51 commercial jams">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/gasStation_icon.png" alt="Gas Station 3D">
+                            <span class="project-category-badge commercial">Simulation Prototype</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Gas Station 3D</h3>
+                            <p class="project-desc">
+                                Hyper-casual prototype trailer built in a 10-day sprint. Implemented inverse kinematics (IK) nozzle targeting and vehicle fueling logic.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Rapid Prototyping</span>
+                                <span>IK Animations</span>
+                                <span>Simulation</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=Lnf7HXggftw" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Trailer
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Stack Vs Stack (Myanmar51) -->
+                    <article class="project-card" data-category="myanmar51 commercial jams">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/stack_icon.png" alt="Stack Vs Stack">
+                            <span class="project-category-badge commercial">Strategy Prototype</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Stack Vs Stack</h3>
+                            <p class="project-desc">
+                                Competitive tower-stacking prototype. Implemented rapid win/loss condition evaluations and physics unit balancing in 2 weeks.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unit Stacking</span>
+                                <span>Physics Logic</span>
+                                <span>Fast Prototyping</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=-LWnUuMe_rM" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Video
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Studio 4: Independent Prototypes & Game Jams -->
+            <div class="studio-block" data-studio="indie">
+                <div class="studio-group-header">
+                    <div class="studio-group-title indie">
+                        <i class="fa-solid fa-flask-vial"></i>
+                        <span>Independent Prototypes &amp; Game Jams</span>
+                    </div>
+                    <span class="studio-scope-badge">Rapid Gameplay &amp; Shader Research</span>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Sir Code A Lot! -->
+                    <article class="project-card" data-category="jams shaders">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/sirCodeAlot_icon.png" alt="Sir Code A Lot!">
+                            <span class="project-category-badge">48-Hr Game Jam</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Sir Code A Lot!</h3>
+                            <p class="project-desc">
+                                48-hour game jam prototype. Control a 2D robot transforming into a 3D avatar to debug glitch entities and eliminate system bugs with spin boosts.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity 3D/2D</span>
+                                <span>C#</span>
+                                <span>Jam Prototype</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://setthuhan-shin.itch.io/sircodealot" target="_blank" rel="noopener noreferrer" class="project-link-btn itch-btn">
+                                    <i class="fa-brands fa-itch-io"></i> Play on Itch.io
+                                </a>
+                                <a href="https://www.youtube.com/watch?v=apCnQG4MEto" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Gameplay
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Cozy Match (Woodo-Style) -->
+                    <article class="project-card" data-category="jams shaders">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/woodo_icon.png" alt="Cozy Match">
+                            <span class="project-category-badge">Stylized Puzzle</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Cozy Match</h3>
+                            <p class="project-desc">
+                                Spatial drag-and-drop puzzle mechanic inspired by *Woodo*. Built with fluid UI canvas snapping and stylized custom materials.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Unity UI</span>
+                                <span>Custom Shaders</span>
+                                <span>Puzzle Logic</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=4UIVwXErjno" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Fill One-Line Puzzle -->
+                    <article class="project-card" data-category="jams">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/fillOneLine_icon.png" alt="Fill One-Line">
+                            <span class="project-category-badge">Grid Algorithm</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Fill One-Line</h3>
+                            <p class="project-desc">
+                                One-line connecting puzzle recreation. Built with pure Vector2 coordinate tracking and custom path validation algorithms.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Vector2 Math</span>
+                                <span>Path Validation</span>
+                                <span>2D Logic</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=u7j3gX8imCI" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Demo
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Fill Them All! -->
+                    <article class="project-card" data-category="shaders jams">
+                        <div class="project-thumb-wrapper">
+                            <img class="project-thumb-img" src="./Data/images/fillThemAll_icon.png" alt="Fill Them All!">
+                            <span class="project-category-badge">Shader Demo</span>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Fill Them All!</h3>
+                            <p class="project-desc">
+                                Arcade shooter showcasing custom Shader Graph effects: volumetric mesh lighting, planar ground fog, and hit-glow shaders.
+                            </p>
+                            <div class="project-tech-tags">
+                                <span>Shader Graph</span>
+                                <span>Volumetric Mesh</span>
+                                <span>Arcade Shooter</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/watch?v=tOVMYnONj4A" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                    <i class="fa-brands fa-youtube"></i> Watch Gameplay
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Technical Art, Shaders & Architecture R&D Showcase -->
+    <section id="shaders" class="section-container">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="section-eyebrow">Graphics &amp; Rendering</span>
+                <h2 class="section-title">Technical Art, Shaders &amp; Architecture R&amp;D</h2>
+                <p class="section-subtitle">Custom URP/HDRP shaders, scriptable render features, volumetric rendering, and engine breakdowns.</p>
+            </div>
+
+            <div class="shader-grid">
+
+                <!-- JoJo Aura Effect -->
+                <div class="shader-card">
+                    <div class="video-responsive-wrapper">
+                        <iframe src="https://www.youtube.com/embed/ob_G0vZfA9s" title="JoJo Aura Effect" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="shader-details">
+                        <div class="shader-header-row">
+                            <h3 class="shader-title"><i class="fa-solid fa-wand-magic-sparkles" style="color: var(--accent-focus);"></i> JoJo-Style Aura Effect</h3>
+                            <span class="shader-type-badge">URP Render Feature</span>
+                        </div>
+                        <p class="shader-desc">
+                            Stylized anime aura built with a <b>Custom Scriptable Render Feature</b>, screen-space distortion passes, normal/depth outline detection, and dynamic Render Textures.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tech-chip">Unity URP</span>
+                            <span class="tech-chip">Render Feature</span>
+                            <span class="tech-chip">Screen-Space Distortion</span>
+                        </div>
+                        <div class="shader-links-row">
+                            <a href="https://www.youtube.com/watch?v=ob_G0vZfA9s" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-youtube"></i> Walkthrough Video
+                            </a>
+                            <a href="https://github.com/SetThuHan-Dev" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dynamic Volumetric Fog -->
+                <div class="shader-card">
+                    <div class="video-responsive-wrapper">
+                        <iframe src="https://www.youtube.com/embed/xSLX8KPr1Mg" title="Dynamic Volumetric Fog" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="shader-details">
+                        <div class="shader-header-row">
+                            <h3 class="shader-title"><i class="fa-solid fa-smog" style="color: var(--accent-focus);"></i> Dynamic Volumetric Fog</h3>
+                            <span class="shader-type-badge">Raymarched Lighting</span>
+                        </div>
+                        <p class="shader-desc">
+                            Real-time raymarched volumetric density fog calculating depth-buffer penetration and light scattering for atmospheric scene depth.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tech-chip">Shader Graph</span>
+                            <span class="tech-chip">Raymarching</span>
+                            <span class="tech-chip">Volumetric Lighting</span>
+                        </div>
+                        <div class="shader-links-row">
+                            <a href="https://www.youtube.com/watch?v=xSLX8KPr1Mg" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-youtube"></i> Walkthrough Video
+                            </a>
+                            <a href="https://github.com/SetThuHan-Dev" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stylized Anime Water -->
+                <div class="shader-card">
+                    <div class="video-responsive-wrapper">
+                        <iframe src="https://www.youtube.com/embed/rxcJg1J25NY" title="Stylized Anime Water" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="shader-details">
+                        <div class="shader-header-row">
+                            <h3 class="shader-title"><i class="fa-solid fa-water" style="color: var(--accent-focus);"></i> Stylized Anime Water</h3>
+                            <span class="shader-type-badge">HLSL / Shader Graph</span>
+                        </div>
+                        <p class="shader-desc">
+                            Stylized water surface with depth-based shoreline foam detection, refractive optical distortions, vertex wave displacement, and caustics.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tech-chip">HLSL</span>
+                            <span class="tech-chip">Shoreline Foam</span>
+                            <span class="tech-chip">Vertex Displacement</span>
+                        </div>
+                        <div class="shader-links-row">
+                            <a href="https://www.youtube.com/watch?v=rxcJg1J25NY" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-youtube"></i> Walkthrough Video
+                            </a>
+                            <a href="https://github.com/SetThuHan-Dev" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ripple-Color-Dissolve -->
+                <div class="shader-card">
+                    <div class="video-responsive-wrapper">
+                        <iframe src="https://www.youtube.com/embed/N8NcfV7iuV0" title="Ripple Color Dissolve" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="shader-details">
+                        <div class="shader-header-row">
+                            <h3 class="shader-title"><i class="fa-solid fa-fire-flame-curved" style="color: var(--accent-focus);"></i> Ripple Color Dissolve</h3>
+                            <span class="shader-type-badge">Procedural Dissolve</span>
+                        </div>
+                        <p class="shader-desc">
+                            Dynamic procedural mesh dissolve with glowing ripple edges, customizable noise alpha-clipping, and emission gradient ramps.
+                        </p>
+                        <div class="tag-list">
+                            <span class="tech-chip">Shader Graph</span>
+                            <span class="tech-chip">Alpha Clipping</span>
+                            <span class="tech-chip">Emission Ramps</span>
+                        </div>
+                        <div class="shader-links-row">
+                            <a href="https://www.youtube.com/watch?v=N8NcfV7iuV0" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-youtube"></i> Walkthrough Video
+                            </a>
+                            <a href="https://github.com/SetThuHan-Dev" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                                <i class="fa-brands fa-github"></i> GitHub Repo
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section id="skills" class="section-container">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="section-eyebrow">Technical Stack</span>
+                <h2 class="section-title">Technical Skills Matrix</h2>
+                <p class="section-subtitle">Core proficiencies across programming, graphics, optimization, and platform toolchains.</p>
+            </div>
+
+            <div class="skills-matrix">
+
+                <!-- Programming Languages -->
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-code" style="color: var(--accent-focus);"></i>
+                        <span>Languages</span>
+                    </div>
+                    <div class="skill-chips-container">
+                        <span class="skill-chip primary-skill">C# (.NET)</span>
+                        <span class="skill-chip primary-skill">C++</span>
+                        <span class="skill-chip primary-skill">HLSL / GLSL</span>
+                        <span class="skill-chip">Python</span>
+                        <span class="skill-chip">JavaScript / TypeScript</span>
+                        <span class="skill-chip">HTML5 / CSS3</span>
+                    </div>
+                </div>
+
+                <!-- Game Engines & Graphics -->
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <i class="fa-brands fa-unity" style="color: #ffffff;"></i>
+                        <span>Engines &amp; Graphics</span>
+                    </div>
+                    <div class="skill-chips-container">
+                        <span class="skill-chip primary-skill">Unity (Built-In / URP / HDRP)</span>
+                        <span class="skill-chip primary-skill">Shader Graph &amp; VFX Graph</span>
+                        <span class="skill-chip">Custom URP Render Features</span>
+                        <span class="skill-chip">Blender 3D (Modeling / Rigging)</span>
+                        <span class="skill-chip">Photoshop &amp; Krita</span>
+                    </div>
+                </div>
+
+                <!-- Performance & Optimization -->
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-gauge-high" style="color: var(--accent-focus);"></i>
+                        <span>Optimization &amp; Profiling</span>
+                    </div>
+                    <div class="skill-chips-container">
+                        <span class="skill-chip primary-skill">PS5 Low Energy Optimization</span>
+                        <span class="skill-chip primary-skill">Unity Profiler &amp; Memory</span>
+                        <span class="skill-chip primary-skill">PSO VFX Pre-warming</span>
+                        <span class="skill-chip">Addressables &amp; Object Pooling</span>
+                        <span class="skill-chip">Frame Debugger &amp; Overdraw</span>
+                    </div>
+                </div>
+
+                <!-- Platforms & Systems -->
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-network-wired" style="color: #ffffff;"></i>
+                        <span>Platforms &amp; Systems</span>
+                    </div>
+                    <div class="skill-chips-container">
+                        <span class="skill-chip primary-skill">PlayStation 5</span>
+                        <span class="skill-chip primary-skill">Unity WebGL</span>
+                        <span class="skill-chip">Android &amp; iOS (Xcode)</span>
+                        <span class="skill-chip">Socket.IO / Node.js</span>
+                        <span class="skill-chip">Git / GitHub / GitLab</span>
+                        <span class="skill-chip">AppLovin LionSDK</span>
+                    </div>
+                </div>
+
+                <!-- Languages Spoken -->
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-language" style="color: var(--accent-focus);"></i>
+                        <span>Languages Spoken</span>
+                    </div>
+                    <div class="skill-chips-container">
+                        <span class="skill-chip primary-skill">English (Upper B2 – Professional Working Proficiency)</span>
+                        <span class="skill-chip primary-skill">Myanmar (Native)</span>
+                        <span class="skill-chip">Japanese (N5~N4)</span>
+                    </div>
+                </div>
+
+                <!-- Engineering & AI Fundamentals -->
+                <div class="skill-category-card">
+                    <div class="skill-category-header">
+                        <i class="fa-solid fa-robot" style="color: #ffffff;"></i>
+                        <span>Engineering &amp; AI</span>
+                    </div>
+                    <div class="skill-chips-container">
+                        <span class="skill-chip">PLC Ladder Diagrams (Pneumatics/Hydraulics)</span>
+                        <span class="skill-chip">PIC Microcontrollers (PIC BASIC)</span>
+                        <span class="skill-chip">Neural Networks (Theoretical Concepts)</span>
+                        <span class="skill-chip">Control Systems Integration</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="section-container">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="section-eyebrow">Qualifications</span>
+                <h2 class="section-title">Education &amp; Certifications</h2>
+                <p class="section-subtitle">Academic degree in engineering and specialized certifications.</p>
+            </div>
+
+            <div class="edu-cert-wrapper">
+
+                <!-- Education Card -->
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <div class="edu-institution">Technological University (Hmawbi)</div>
+                        <div class="edu-degree">&lt;Bachelor of Engineering in Mechatronics&gt;</div>
+                        <div class="edu-meta">2013 – 2019 • Robotics, Automation &amp; Control Systems</div>
+                    </div>
+                    <ul class="timeline-bullet-list">
+                        <li><b>Core Engineering &amp; AI:</b> Electro-mechanical integration, control systems, theoretical Neural Networks, and C++.</li>
+                        <li><b>Industrial Automation:</b> PLC ladder diagram programming (pneumatics/hydraulics) and embedded PIC BASIC.</li>
+                    </ul>
+                </div>
+
+                <!-- Certifications Card -->
+                <div class="cert-card">
+                    <div class="edu-header">
+                        <div class="edu-institution">Certifications</div>
+                        <div class="edu-degree">&lt;Professional Development&gt;</div>
+                    </div>
+                    <ul class="cert-list">
+                        <li class="cert-item">
+                            <i class="fa-solid fa-certificate cert-icon"></i>
+                            <div>
+                                <div class="cert-title">Design Patterns for Game Programming</div>
+                                <div class="cert-issuer">Udemy (July 2021)</div>
+                            </div>
+                        </li>
+                        <li class="cert-item">
+                            <i class="fa-solid fa-certificate cert-icon"></i>
+                            <div>
+                                <div class="cert-title">Applied Data Science Specialization</div>
+                                <div class="cert-issuer">Coursera Course Certificates (Aug 2020)</div>
+                            </div>
+                        </li>
+                        <li class="cert-item">
+                            <i class="fa-solid fa-certificate cert-icon"></i>
+                            <div>
+                                <div class="cert-title">IBM AI Engineering Specialization</div>
+                                <div class="cert-issuer">Coursera / IBM (Oct 2020)</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer Section -->
+    <section id="contact" class="contact-section">
+        <div class="container-custom">
+            <div class="contact-card">
+                <span class="section-eyebrow">Get In Touch</span>
+                <h2 class="contact-title text-gradient">Let's Build Great Games</h2>
+                <p>
+                    Available for senior game engineering, console optimization, and technical art roles.
+                </p>
+
+                <div class="contact-email-box">
+                    <div class="contact-email">setthuhan.Dev@outlook.com</div>
+                    <button id="copy-email-btn" class="copy-btn">
+                        <i class="fa-regular fa-copy"></i> Copy Email
+                    </button>
+                    <a href="mailto:setthuhan.Dev@outlook.com" class="btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i> Send Email
                     </a>
                 </div>
-            </section>
 
-            <hr>
-
-            <section class="buttons">
-                <div class="button_container">
-                    <div id="projects-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Projects</div> 
-                    <div id="career-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Career</div> 
-                    <div id="skills-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Skills</div> 
-                    <div id="research-Button" class="btn btn-5 kd-button" onClick="document.getElementById('project_data_area').style.opacity = 0;">Research</div> 
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/set-thu-han/" class="social-icon-btn" title="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/SetThuHan-Dev" class="social-icon-btn" title="GitHub" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                    <a href="https://setthuhan-shin.itch.io/" class="social-icon-btn" title="Itch.io" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-itch-io"></i>
+                    </a>
+                    <a href="./Data/resume/Set_Thu_Han_Resume.pdf?v=20260826-7" class="social-icon-btn" title="Download Resume PDF" download>
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </a>
                 </div>
-            </section>
+            </div>
+
+            <footer class="site-footer">
+                <p>© 2026 Set Thu Han. Senior Unity Developer &amp; Game Engineer.</p>
+                <p class="footer-disclaimer">
+                    All game titles, trademarks, logos, and key art are property &amp; copyright of their respective owners (Sony Interactive Entertainment, Sanrio, Mega Cat Studios, DKMads, Myanmar51 Studio). Showcased strictly for professional portfolio, attribution, and demonstration purposes.
+                </p>
+            </footer>
         </div>
+    </section>
 
-        <!-- Scripts used in top body -->
-        <script src="scripts/text_animation.js?v=20260724-2"></script>
-    </body>
-
-    <div id="bottom">
-        <!-- Data_Labels -->
-        <div id="data_selection_area" class="container kd-selection-content" style="opacity: 0;"></div>
-        <div id="project_data_area" class="container kd-selection-content" style="opacity: 0;"></div>
-        <script src="scripts/button_nav_selection.js?v=20260724-2"></script>
-        <script src="scripts/button_nav_proj.js?v=20260724-2"></script>
-        <script src="scripts/button_nav_career.js?v=20260724-2"></script>
-    </div>
-    
+    <!-- Interactive Scripts -->
+    <script src="scripts/portfolio_interactive.js?v=20260826-7"></script>
+    <script src="scripts/text_animation.js?v=20260826-7"></script>
+</body>
 </html>
